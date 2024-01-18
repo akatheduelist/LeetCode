@@ -2,6 +2,10 @@
 
 <p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>
 
+## My Whiteboard
+![dsna1](https://github.com/akatheduelist/LeetCode/assets/52519668/9dba41bb-c4ac-47c9-95f7-b2a2f3105fab)
+
+
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
