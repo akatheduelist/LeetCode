@@ -4,16 +4,21 @@
  * @return {boolean}
  */
 var canPlaceFlowers = function(flowerbed, n) {
-    for(i=0; i<flowerbed.length; i++) {
-        const firstFlower = i === 0
-        const lastFlower = i === flowerbed.length - 1
+    if (n<=0) return true
 
-        if(flowerbed[i] === 0 && 
-        (flowerbed[i-1] === 0 || firstFlower) && 
-        (flowerbed[i+1] === 0 || lastFlower)) {
+    for(i=0; i<flowerbed.length; i++) {
+        const currentFlower = flowerbed[i];
+        const prevFlower = flowerbed[i-1];
+        const nextFlower = flowerbed[i+1];
+        
+        if(currentFlower === 0 && 
+        prevFlower !== 1 && 
+        nextFlower !== 1) {
             n--
             flowerbed[i] = 1
+            i++
         }
+
         if (n<=0) return true
     }
     return false
