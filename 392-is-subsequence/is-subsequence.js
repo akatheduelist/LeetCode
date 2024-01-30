@@ -13,8 +13,8 @@ var isSubsequence = function (s, t) {
         if (t[i] === char) {
             charIdx++
             char = s[charIdx]
+            if (charIdx === s.length) return true
         }
-        if (charIdx > s.length - 1) return true
     }
     return false
 };
